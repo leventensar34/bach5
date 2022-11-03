@@ -1,0 +1,44 @@
+
+   ### Map arayüzünün metotları###
+
+   --> void clear()
+     Map içindeki bütün gönderimleri siler.
+
+   --> boolean containsKey(Object key)
+     Map içinde belirtilen anahtar varsa true yoksa false değeri verir.
+
+   --> boolean containsValue(Object value)
+     Map içinde belirtilen değer varsa true yoksa false değeri verir.
+
+   --> Set entrySet()
+     Map içindeki öğeleri bir küme olarak verir.
+
+   --> boolean equals(Object o)
+     Belirtilen öğenin Map içinde bir öğeye eşit olup olmadığını bulur.
+
+    -->Object get(Object key)
+     Belirtilen anahtarın eşleştiği değeri verir.
+
+    --> int hashCode()
+     Map için hash kodu verir.
+
+   --> boolean isEmpty()
+     anahtar-değer eşleşmesi yoksa true verir.
+
+    --> Set keySet()
+     anahtarları bir küme olarak verir.
+
+    --> Object put(Object key, Object value)
+     verilen anahtarı verilen nesneye eşler.
+
+    --> void putAll(Map t)
+     Map ‘i istenilen Map’e kopyalar.
+
+    --> Object remove(Object key)
+     verilen anahtarla eşleşen nesne varsa onu Map’ten siler.
+
+    --> int size()
+     anahtar-değer eşleşmelerinin sayısını verir.
+
+    --> Collection values()
+     map içindeki değerleri bir koleksiyon olarak verir.

@@ -1,0 +1,72 @@
+
+OOP : Object Oriented Programming
+       code reusability
+       less memory usage
+       centralized structure
+       less duplication
+       easy maintain
+
+    1) Encapsulation :
+                     Data hiding by private access modifier
+                     use public getter (read ) and setter(write) method
+                     getter : read ONLY
+                               returns the private data
+                               no parameters
+                     setter : write ONLY
+                                does NOT returns any value
+                                has parameter
+    2) Inheritance  :
+                     Building IS A relationships between class (parent/child-sub/super)
+
+                     Class A extends Class B
+                       sub-child       super-parent
+
+                     sub class: inherits all the methods and variables from super class
+                     super class: can not inherit anything from sub class
+                     A class can only extend one class -> Class A extends Class B , Class C => WRONG USAGE
+                     A class can be extended by multiple classes  -> Sub Class A extends Super Class B
+                                                                     Sub Class C extends Super Class B
+                                                                     Sub Class D extends Super Class B
+
+
+    3) Abstraction  :
+                    Hiding the implementation details
+                    putting the focus on essentials without worrying about small details
+                    Abstract methods : without the body-> meant to be overriden(can not final, static , private)
+
+          * Abstract class : meant to be parent (can't be final)
+                             can NOT create object
+                             abstract class can have all the methods and variables of the regular class
+                             + abstract methods
+
+          * Interface      : Blueprint of the class, provides the additional methods that the specific classes needs
+
+                             meant to be implemented (can not be final)
+                             public is the only access modifier
+                             variable : static and final by default
+                             methods: default methods, static methods, abstract methods
+
+
+          Abstract class vs Interface
+
+          one class can extends one abstract class
+          one class can implement multiple interface
+
+          public abstract class SuperClass{}
+
+          public interface A{}
+          public interface B{}
+          public interface C{}
+
+          public class subClass extends superClass implements A,B,C {}
+
+          one interface can extend multiple interfaces
+
+          public interface A extends B,C { }
+          public abstract class D extends SuperClass{}
+
+
+
+   4) Polymorphism
+
+

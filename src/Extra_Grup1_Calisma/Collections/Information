@@ -1,0 +1,83 @@
+
+            Java Collections:
+
+ - Verileri saklamak, saklanan veriyi çekmek, işlemek ve zaman zaman sakladığımız yerde çeşitli verileri aramak için
+ collections kullanırız.Interface olup içinde benzer türden nesneleri belirli şekilde tutacak,
+ nesnelere ait temel davranışları belirler.
+
+ ---->Yararlari
+ 1-   Veri ekledikçe veya çıkardıkça, collection yapısının uzunluğunu otomatik olarak ayarlaması ve
+ bizim için oldukça büyük bir esneklik sağlaması.
+
+ 2-Listeleme, sıralama gibi çeşitli algoritmaları oturup sıfırdan yazmamıza gerek bırakmadan collections içerisinde
+ bulunan algoritmaları kullanmamıza imkan sağlar.
+
+ 3-Oluşturduğumuz uygulamaya sağlayacağı esneklik ve performans arttırıcılığı özelliği ile uğraşmamız gereken
+ sıkıntıları otomatik olarak çözer.
+
+ 4-Verileri bir araya toplayarak işlem yapmamızı kolaylaştırır.
+
+ ----> Metodlari
+  1- int size() : Collection içerisinde bulunan elemanların sayısını verir
+  2-boolean isEmpty() : Collection içerisinde eleman yoksa true değerini return eder.
+  3-boolean contains(Object element) : Parametre olarak verilen eleman Collection içerisinde mevcutsa true değerini dönderir.
+  4-boolean add(Object element) : Collection yapısına object ekler . Collection’ı implemente eden sınıflar bu metodu
+  implemente etmek zorunda değildir.
+  5-boolean remove(Object element): Collection yapısından object remove eder . Collection ı implemente eden sınıflar bu
+   metodu implemente etmek zorunda değildir.
+  6-boolean containsAll(Collections<E> c) : Bulk bir işlemdir . Verilen obje listesinin collection içerisinde var olup
+  olmadığını kontrol eder
+  7-boolean addAll(Collections<E> c) : Parametre olarak verilen listeyi toplu olarak collection içerisine ekler.
+  8-boolean removeAll(Collections<E> c) : Parametre olarak verilen liste içerisindeki elemanları collection içerisinden remove eder.
+  9-boolean retainAll(Collections<E> c) :Parametre olarak verilen liste ile collection içerisindeki elemanları aynı tutar .
+   Yani parametre olarak verilen listede olmayan elemanlar collection içerisinde çıkartılır .
+  10-void clear() : Liste içerisindeki elemanları çıkartır
+  11-Object[] toArray() : List yapısı array yapısına dönüştürülür
+  12-<T> T[] toArray(T[] a) : List yapısı array yapısına dönüştürülür ve list yapısının içeriği de değiştirilir .
+
+  ---> Collection 3 e ayrilir:
+    1-  List<E>
+    2-  Set<E>
+    3-  Queue<E>
+
+    --> List Interface (Listeleme tekrarlarda dahil olmak uzere)
+
+  Bu arabirim sayesinde koleksiyonumuzda tekrarlanan ya da tekrarlanmayan elemanları sıralı olarak tutabiliriz.
+  Aynı zamanda elemanlara index yoluyla erişebiliriz.
+
+   a-ArrayList Sınıfı
+ Bu sınıf elemanlarını boyutu değişen dinamik dizilerde tutmaktadır. Yani bu sınıfa ait dizilerin boyutları azaltılabilir
+ ya da arttırılabilir. Bir başka ifade ile bir dizinin boyutunu değiştinde ilk dizideki elemanlar yeni diziye kopyalanır.
+
+   b-LinkedList Sınıfı
+ Bağlı listeler, Bu sınıf C dilindeki bağlı listelerin javadaki görüntüsüdür. Bu tip listelerde elemanlar kendisinden
+ sonra gelen elemanlanın bilgilerini ya da adreslerini tutarlar. Bu sınıf herhangi bir listeye eleman ekleme konusunda
+ ArrayList sınıfından daha etkilidir.
+
+    --> Set Interface (Matematikteki kume mantigi)
+
+  Set arayüzü Collection arayüzünü extend etmiştir. Yani Collection arayüzünün metodlarını inherit eder. Set arayüzünü
+  implemente eden tüm sınıfların ortak özelliği şudur ; duplicate objeler set içerisine atılmaz .Aynı objeyi set içerisine
+  atmak istediğimizde set bunu ignore eder.
+
+    a- HashSet sınıfı: Bu sınıf elemanlarını bir hash tablosunda tutar. Hash tablosu elemanlarına erişimi kolaylaştırmak
+    için elemanlarına anahtarlar vasıtasıyla ulaşılmasını sağlar.
+
+    b-  LinkedHashSet Sınıfı: HashSet sınıfı ile aynı işi görmektedir. Bu sınıf elemanları koleksiyona eklenme sıralarına
+     göre tutulmaktadır.
+
+    c- TreeSet Sınıfı: Bu sınıf set arabiriminden türeyen sortedSet arabirimini uygulamaktadır. SortedSet arabirimi
+     koleksiyona ait elemanları sıralı olacak şekilde tutmasını sağlar.
+
+     --> Queue (kuyruk) Interface
+
+    Bu sınıf özel durumlar dışında ilk giren ilk çıkar mantığı ile çalışmaktadır.
+    FIFO (first in first out)
+    Bu sınıfa ait metotlar;
+    add(eleman): Parametrede verilen elemanı kuyruğa ekler. İşlemin başarısız olması durumunda hata fırlatır.
+    offer(eleman): Parametrede verilen elemanı kuyruğa ekler. İşlemin başarısız olması durumunda null döner.
+    poll(): Kuyruğun başındaki elemanı kuyruktan çıkartır.
+    peek(): Kuyrukta sıradaki elemana ulaşmak için kullanılır.
+
+     //  que.remove(); --que.poll();
+     // Not- (iki metod arasindaki fark):  Remove metodu eger list bos ise exception verir. Fakat poll metodu null yazdirir.
